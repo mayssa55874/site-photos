@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Galerie de Photos</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <h1>Galerie</h1>
+  <% if (data.length === 0) { %>
+    <p>Aucune photo disponible.</p>
+  <% } else { %>
+    <% data.forEach(photo => { %>
+      <div class="gallery-item">
+        <p><strong><%= photo.matricule %></strong> - <%= photo.date %></p>
+        <img src="<%= photo.url %>" width="300" />
+      </div>
+    <% }) %>
+  <% } %>
+  <p><a href="/">Retour</a></p>
+</body>
+</html>

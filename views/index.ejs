@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Upload Photo</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <h1>Ajouter une photo</h1>
+  <form action="/upload" method="POST" enctype="multipart/form-data">
+    <label>Matricule :</label>
+    <input type="text" name="matricule" required />
+    <br />
+    <label>Date :</label>
+    <input type="date" name="date" required />
+    <br />
+    <label>Photos :</label>
+    <input type="file" name="photos" multiple required />
+    <br />
+    <button type="submit">Envoyer</button>
+  </form>
+  <p><a href="/gallery">Voir la galerie</a></p>
+</body>
+</html>
